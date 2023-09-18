@@ -73,33 +73,7 @@ loginForm.addEventListener("submit", async (e) => {
 
   if (firstname.value == "" || email.value == "" || contact.value == "") {
     alert("Ensure you input a value in all fields!");
-  } else {
-    fetch("https://forms.maakeetoo.com/formapi/424", {
-      method: "POST",
-      headers: { Authentication: "Bearer WD0WFD61P3MDUPQ0MNWKASJ61" },
-    })
-      .then((response) => response.json())
-      .then((json) => console.log(json));
-
-    let response = await fetch("https://jsonplaceholder.typicode.com/todos/1", {
-      method: 'POST',
-      headers: { Authentication: 'Bearer WD0WFD61P3MDUPQ0MNWKASJ61' }
-    })
-      .then((resp) => {
-        let gg = resp.json();
-        console.log("alsgdhj -==>", gg);
-      })
-      .then((json) => console.log("cfghfhfh", JSON.stringify(json)));
-    alert("This form has been successfully submitted!");
-
-    console.log(
-      `This form has a username of ${firstname.value} and password of ${email.value} and ${contact.value}`
-    );
-
-    firstname.value = "";
-    email.value = "";
-    contact.value = "";
-  }
+  } 
 });
 
 let page = 1;
